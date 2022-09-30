@@ -25,7 +25,7 @@
 }
 
 .App-link {
-  color: #61dafb;
+  color: #99a4e3;
 }
 
 @keyframes App-logo-spin {
@@ -36,3 +36,43 @@
     transform: rotate(360deg);
   }
 }
+
+:root {
+  --bg-menu: #58ebf5;
+  --logo-width: 150px;
+  --content-header-height: 60px;
+  --content-footer-height: 40px;
+  }
+  body {
+  box-sizing: border-box;
+  font-family: "Pacifico", sans-serif;
+  }
+  /* Lay-out */
+  .App {
+  margin: 0px;
+  display: grid;
+  grid-template-columns: var(--logo-width) 1fr;
+  
+  grid-template-rows: var(--content-header-height) 1fr var(--content-
+  footer-height);
+  
+  grid-template-areas:
+  "logo menu"
+  "content content"
+  "footer footer";
+  height: 100vh;
+  background-color: #ffe8e8;
+  }
+  aside.logo{
+  grid-area: logo;
+  }
+  nav.menu {
+  grid-area: menu;
+  }
+  div.content {
+  grid-area: content;
+  }
+
+  footer.footer {
+    grid-area: footer;
+    }
